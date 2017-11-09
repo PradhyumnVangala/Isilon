@@ -9,6 +9,7 @@ import requests
 import socket
 userid='username'
 password='password'
+#add ip's of nodes you want to get the client connections
 Node_ips=['add all node ip's here']
 #this would be a client connection per node function
 def get_smb_sessions_pernode(userid,password,url):
@@ -21,9 +22,7 @@ def get_smb_sessions_pernode(userid,password,url):
 
     
 #To loop through all the nodes use this loop
-#Node_ips=[ ]
-#add ip's of nodes you want to get the client connections
-Node_ips=['add all node ip's here']
+
 for i in Node_ips:
     url='https://'+i+':8080/platform/1/protocols/smb/sessions'
     print (url)
